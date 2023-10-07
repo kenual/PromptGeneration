@@ -15,11 +15,12 @@ prompt = f"\
          - the tone and style of the answer\n\
          - provide a number of options when answering\n\
          - best response output style to explain to the user\n\
-         Start and end the prompt with ```\n\
+         Start the prompt with ```\n\
+         End the prompt with ###<<END>>\n\
         "
 
 # confirm user goal
-print(f"\n\nYour goal is:\n{'='*len(goal)}\n{goal}\n{'='*len(goal)}\n\n")
+print(f"\nYour goal is:\n{'='*len(goal)}\n{goal}\n{'='*len(goal)}\n")
 
 # streamed completion
 response = g4f.ChatCompletion.create(
