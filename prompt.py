@@ -17,7 +17,7 @@ prompt = f"\
          - provide a number of options when answering\n\
          - best response output style to explain to the user\n\
          Start the prompt with ```\n\
-         End the prompt with ###<<END>>\n\
+         End the prompt with <<END>><<END>>\n\
         "
 
 # confirm user goal
@@ -41,5 +41,5 @@ for message in response:
     print(message, flush=True, end='')
 print(end='\n')
 
-results = re.findall(r'```\n(.*?)\n###<<END>>', text, re.DOTALL)
+results = re.findall(r'```\n(.*?)\n<<END>><<END>>', text, re.DOTALL)
 print(results[0], end='\n')
