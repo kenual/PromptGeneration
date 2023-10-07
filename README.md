@@ -1,2 +1,2 @@
 # PromptGeneration
- Generate Optimized Prompt for LLM
+ Generate LLM optimized prompt
