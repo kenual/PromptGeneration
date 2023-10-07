@@ -1,3 +1,4 @@
+import re
 import g4f
 
 # enter goal
@@ -34,8 +35,11 @@ response = g4f.ChatCompletion.create(
     temperature=0.2
 )
 
+text = ''
 for message in response:
+    text += message
     print(message, flush=True, end='')
 print(end='\n')
 
-
+results = re.findall(r'```\n(.*?)\n###<<END>>', text, re.DOTALL)
+print(results[0], end='\n')
