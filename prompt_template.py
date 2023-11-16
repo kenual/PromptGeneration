@@ -27,9 +27,25 @@ llm = G4FLLM()
 
 prompt = PromptTemplate(
     input_variables=["product"],
-    template="What can we conclude by analyzing data from URL:{url}? Just at least three insights",
+    template=\
+"\
+I need a best optimized prompt to get ChatGPT to achieve the following user goal\n\
+\n\
+    {goal}\n\
+\n\
+Your prompt will be sent to ChatGPT.\n\
+The prompt needs to be in bulleted format instructing ChatGPT\n\
+    - optimized persona to take on to achieve the above goal\n\
+    - the context that customized prompt is based on\n\
+    - the desired outcome of the prompt\n\
+    - the tone and style of the answer\n\
+    - provide a number of options when answering\n\
+    - best response output style to explain to the user\n\
+Start the prompt with ```\n\
+End the prompt with <<END>><<END>>\n\
+"
 )
 
 chain = LLMChain(llm=llm, prompt=prompt)
 
-print(chain.run("https://www.apple.com/newsroom/pdfs/fy2023-q4/FY23_Q4_Consolidated_Financial_Statements.pdf"))
+print(chain.run("how to use ChatGPT?"))
