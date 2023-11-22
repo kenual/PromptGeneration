@@ -16,6 +16,7 @@ def role_chat(role: str, message: str) -> list[str]:
 
 def get_gpt_prompt(goal: str) -> str:
     return f"\
+You are an expert prompt engineer specializing in optimizing prompts for ChatGPT.\n\
 I need a best optimized prompt to get ChatGPT to achieve the following user goal\n\
 \n\
     {goal}\n\
@@ -28,8 +29,8 @@ The prompt needs to be in bulleted format instructing ChatGPT\n\
     - the tone and style of the answer\n\
     - provide a number of options when answering\n\
     - best response output style to explain to the user\n\
-Start the prompt with ```\n\
-End the prompt with <<END>><<END>>\n\
+Start the prompt with <|start|>\n\
+End the prompt with <|end|>\n\
 "
 
 # enter goal
@@ -48,7 +49,7 @@ for message in response:
     print(message, flush=True, end='')
 print(end='\n')
 
-results = re.findall(r'```\n(.*?)\n<<END>><<END>>', text, re.DOTALL)
+results = re.findall(r'\<\|start\|\>\n(.*?)\n\<\|end\|\>', text, re.DOTALL)
 gpt_prompt = results[0]
 
 lines = gpt_prompt.split('\n')
