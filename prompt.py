@@ -56,6 +56,8 @@ lines = gpt_prompt.split('\n')
 role = lines[0]
 prompt = ''.join(lines[1:]) + '\n- Response output is a Markdown page'
 
+print(end='\n')
+
 response = role_chat(role, prompt)
 for message in response:
     print(message, flush=True, end='')
