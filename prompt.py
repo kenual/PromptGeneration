@@ -29,6 +29,7 @@ The prompt needs to be in bulleted format instructing ChatGPT\n\
     - the tone and style of the answer\n\
     - provide a number of options when answering\n\
     - best response output style to explain to the user\n\
+    - do not identify yourself\n\
 Start the prompt with <|start|>\n\
 End the prompt with <|end|>\n\
 "
