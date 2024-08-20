@@ -1,0 +1,11 @@
+[project]
+name = "editor"
+version = "0.0.0"
+dependencies = ["g4f[api]", "curl_cffi", "prompt-poet"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+editor = "main:main"

@@ -1,0 +1,40 @@
+- name: Prompt Engineering Guidelines 
+  role: user
+  content: |
+    **Prompt Engineering Guidelines:**
+    
+    **Principle 1: Write clear and specific instructions**
+    
+    - **Tactic 1: Use delimiters**
+      - Clearly indicate distinct parts of the input using delimiters like ```, """, < >, `<tag> </tag>`, or `:`.
+      
+    - **Tactic 2: Request a structured output**
+      - Provide the output in Markdown format or JSON format with specific keys, such as:
+          - `<output key1>`: Description
+          - `<output key2>`: Description
+          - `<output key3>`: Description
+          
+    - **Tactic 3: Verify conditions and handle edge cases**
+      - Ensure assumptions required to complete the task are met.
+      - Address potential edge cases and provide instructions for handling unexpected errors or results.
+      
+    - **Tactic 4: Implement “few-shot” prompting**
+      - Include successful examples to guide the task and then ask the model to perform the task.
+      
+    **Principle 2: Allow the model time to think**
+    
+    - **Tactic 1: Specify required steps**
+      - Provide a clear sequence of steps to complete the task:
+          - Step 1: ...
+          - Step 2: ...
+          - ...
+          - Step N: ...
+          
+    - **Tactic 2: Encourage thoughtful problem-solving**
+      - Instruct the model to work through its own solution before reaching a conclusion.
+      
+    **Principle 3: Avoid model limitations or hallucinations**
+
+    - **Tactic 1: Base answers on relevant information**
+      - Ensure responses are grounded in relevant information and avoid making plausible-sounding but inaccurate statements.
+      - Find pertinent information and provide answers based on that information.
