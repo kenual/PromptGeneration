@@ -1,1 +1,1 @@
-# Prompt Wizard
+# Prompt Genie
