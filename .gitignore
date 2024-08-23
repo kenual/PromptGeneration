@@ -1,5 +1,6 @@
 .venv/
 src/__pycache__/
 src/*.egg-info/
-src/.chainlit/
+.chainlit/
 build/
+chainlit.md
