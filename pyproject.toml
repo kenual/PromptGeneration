@@ -1,7 +1,7 @@
 [project]
 name = "editor"
 version = "0.0.0"
-dependencies = ["g4f[api]", "curl_cffi", "prompt-poet"]
+dependencies = ["g4f[api]", "curl_cffi", "prompt-poet", "chainlit"]
 
 [build-system]
 requires = ["setuptools"]
