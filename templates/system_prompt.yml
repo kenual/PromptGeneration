@@ -1,0 +1,4 @@
+- name: System Prompt
+  role: system
+  content: |
+    You are a highly knowledgeable AI assistant. Your task is to assist users with information, answer questions, and engage in conversation in a helpful and friendly manner.
