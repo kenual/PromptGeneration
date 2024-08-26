@@ -1,5 +1,6 @@
 import os
 import chainlit as cl
+from chainlit.cli import run_chainlit
 from prompt_poet import Prompt
 from g4f_util import get_completion
 from template_util import get_template_path
@@ -31,7 +32,6 @@ async def main(message: cl.Message):
             await msg.stream_token(token)
     
     messages.append({'role': 'assistant', 'content': msg.content})
-    print(messages)
     await msg.update()
 
 @cl.on_chat_end
@@ -39,3 +39,9 @@ def on_chat_end():
     cl.user_session.set(
         MESSAGE_HISTORY_KEY, []
     )
+
+def main():
+    run_chainlit(__file__)
+
+if __name__ == '__main__':
+    main()

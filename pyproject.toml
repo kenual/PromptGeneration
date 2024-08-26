@@ -1,5 +1,5 @@
 [project]
-name = "editor"
+name = "prompt-genie"
 version = "0.0.0"
 dependencies = ["g4f[api]", "curl_cffi", "prompt-poet", "chainlit"]
 
@@ -8,4 +8,4 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project.scripts]
-editor = "main:main"
+editor = "app:main"
