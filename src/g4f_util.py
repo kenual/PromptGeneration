@@ -4,7 +4,7 @@ from g4f.models import gpt_4o
 from g4f.typing import Messages
 from chainlit import Message
 
-DEFAULT_MODEL = gpt_4o
+DEFAULT_MODEL = gpt_4o.name
 
 def get_completion(
     messages: Messages,
