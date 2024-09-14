@@ -1,4 +1,5 @@
 import os
+import sys
 from prompt_poet import Prompt
 from g4f_util import get_completion
 
@@ -7,7 +8,9 @@ template_path = os.path.abspath(os.path.join(
     CWD, "../templates", "prompt_generation.yml.j2"))
 
 while True:
-    user_input = input('Describe a new task you want to complete❓\n🤔\n\n')
+    print('Describe a new task you want to complete❓ 🤔\n')
+    lines = sys.stdin.readlines()
+    user_input = '\n'.join(lines)
     if user_input.lower() in ['', 'exit', 'quit']:
         break
     print()
